@@ -41,5 +41,12 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# NFC
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.boot.hardware.sku=munch
+
+PRODUCT_PACKAGES += \
+    MunchNfcOverlay
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/munch/munch-vendor.mk)
