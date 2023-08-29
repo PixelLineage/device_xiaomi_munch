@@ -5,6 +5,13 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+function vendor_imports() {
+    cat <<EOF >>"$1"
+		"hardware/qcom-caf/common/libqti-perfd-client",
+		"vendor/qcom/opensource/display",
+EOF
+}
+
 set -e
 
 export DEVICE=munch
