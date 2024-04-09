@@ -49,20 +49,6 @@
          empty string is passed in -->
     <string name="config_wlan_data_service_package" translatable="false">vendor.qti.iwlan</string>
 
-    <!-- The default refresh rate for a given device. Change this value to set a higher default
-         refresh rate. If the hardware composer on the device supports display modes with a higher
-         refresh rate than the default value specified here, the framework may use those higher
-         refresh rate modes if an app chooses one by setting preferredDisplayModeId or calling
-         setFrameRate().
-         If a non-zero value is set for config_defaultPeakRefreshRate, then
-         config_defaultRefreshRate may be set to 0, in which case the value set for
-         config_defaultPeakRefreshRate will act as the default frame rate. -->
-    <integer name="config_defaultRefreshRate">0</integer>
-
-    <!-- The default peak refresh rate for a given device. Change this value if you want to allow
-         for higher refresh rates to be automatically used out of the box -->
-    <integer name="config_defaultPeakRefreshRate">120</integer>
-
     <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
         percent. The length of this array is assumed to be one greater than
         config_ambientThresholdLevels. The brightening threshold is calculated as
@@ -340,64 +326,10 @@
         Note that this value should *not* reflect the maximum brightness value for any high
         brightness modes but only the maximum brightness value obtainable in a sustainable manner.
         This array should be equal in size to config_screenBrightnessBacklight -->
-    <integer-array name="config_screenBrightnessNits">
-        <item>5</item>
-        <item>1000</item>
-    </integer-array>
-
-    <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
-        percent. The length of this array is assumed to be one greater than
-        config_dynamicHysteresisLuxLevels. The brightening threshold is calculated as
-        lux * (1.0f + CONSTRAINT_VALUE). When the current lux is higher than this threshold,
-        the screen brightness is recalculated. See the config_dynamicHysteresisLuxLevels
-        description for how the constraint value is chosen. -->
-    <integer-array name="config_dynamicHysteresisBrightLevels">
-        <item>2000</item>
-        <item>2000</item>
-        <item>1000</item>
-        <item>1000</item>
-        <item>500</item>
-        <item>500</item>
-        <item>500</item>
-        <item>500</item>
-    </integer-array>
-
-    <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
-        percent. The length of this array is assumed to be one greater than
-        config_dynamicHysteresisLuxLevels. The darkening threshold is calculated as
-        lux * (1.0f - CONSTRAINT_VALUE). When the current lux is lower than this threshold,
-        the screen brightness is recalculated. See the config_dynamicHysteresisLuxLevels
-        description for how the constraint value is chosen. -->
-    <integer-array name="config_dynamicHysteresisDarkLevels">
-        <item>800</item>
-        <item>800</item>
-        <item>800</item>
-        <item>800</item>
-        <item>800</item>
-        <item>500</item>
-        <item>500</item>
-        <item>500</item>
-    </integer-array>
-
-    <!-- Array of ambient lux threshold values. This is used for determining hysteresis constraint
-        values by calculating the index to use for lookup and then setting the constraint value
-        to the corresponding value of the array. The new brightening hysteresis constraint value
-        is the n-th element of config_dynamicHysteresisBrightLevels, and the new darkening
-        hysteresis constraint value is the n-th element of config_dynamicHysteresisDarkLevels.
-        The (zero-based) index is calculated as follows: (MAX is the largest index of the array)
-        condition                      calculated index
-        value < lux[0]                 0
-        lux[n] <= value < lux[n+1]     n+1
-        lux[MAX] <= value              MAX+1 -->
-    <integer-array name="config_dynamicHysteresisLuxLevels">
-        <item>2</item>
-        <item>10</item>
-        <item>30</item>
-        <item>100</item>
-        <item>800</item>
-        <item>2000</item>
-        <item>4000</item>
-    </integer-array>
+    <array name="config_screenBrightnessNits">
+        <item>4.5</item>
+        <item>1000.0</item>
+    </array>
 
     <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
         percent. The length of this array is assumed to be one greater than
@@ -508,27 +440,14 @@
         <item>115</item>
     </array>
 
-    <!-- The display uses different gamma curves for different refresh rates. It's hard for panel
-         vendor to tune the curves to have exact same brightness for different refresh rate. So
-         flicker could be observed at switch time. The issue is worse at the gamma lower end.
-         In addition, human eyes are more sensitive to the flicker at darker environment.
-         To prevent flicker, we only support higher refresh rates if the display brightness is above
-         a threshold. And the darker environment could have higher threshold.
-         For example, no higher refresh rate if
-         display brightness <= disp0 && ambient brightness <= amb0
-         || display brightness <= disp1 && ambient brightness <= amb1
-    -->
-    <integer-array name="config_brightnessThresholdsOfPeakRefreshRate">
-        <item>10</item> <!-- 33% UI brightness -->
-        <item>14</item> <!-- 40% UI brightness -->
-    </integer-array>
-    <integer-array name="config_ambientThresholdsOfPeakRefreshRate">
-        <item>-1</item>
-        <item>20</item>
-    </integer-array>
+    <!-- Display - Dynamic Refresh Rate Topic -->
+    <!-- The default refresh rate. Alioth manages this using the peak refresh rate setting, so set
+         this value to 0 so it has no effect. -->
+    <integer name="config_defaultRefreshRate">0</integer>
 
-    <!-- Default refresh rate in the zone defined by brightness and ambient thresholds.
-         If non-positive, then the refresh rate is unchanged even if thresholds are configured. -->
+    <!-- The default peak refresh rate for a given device. -->
+    <integer name="config_defaultPeakRefreshRate">120</integer>
+
+    <!-- default refresh rate in the zone defined by brightness and ambient thresholds -->
     <integer name="config_defaultRefreshRateInZone">120</integer>
-
 </resources>
