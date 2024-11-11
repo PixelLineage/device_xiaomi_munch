@@ -1,4 +1,4 @@
-# Device proprietary files - from munch 14 UKQ1.231207.002 V816.0.4.0.ULMMIXM package, unless pinned
+# Device proprietary files - from munch 14 RKQ1.211001.001 V816.0.5.0.ULMMIXM package, unless pinned
 
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
