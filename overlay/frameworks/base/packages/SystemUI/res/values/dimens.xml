@@ -51,7 +51,7 @@
     <dimen name="status_bar_padding_top">2.25dp</dimen>
 
     <!-- the padding on the start of the statusbar -->
-    <dimen name="status_bar_padding_start">13dp</dimen>
+    <dimen name="status_bar_padding_start">5.75dp</dimen>
 
     <!-- Margin on the left side of the carrier text on Keyguard -->
     <dimen name="keyguard_carrier_text_margin">24dp</dimen>
