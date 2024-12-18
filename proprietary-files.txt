@@ -69,8 +69,6 @@ vendor/firmware/mono.cnt
 vendor/firmware/tfa98xx.cnt
 
 # Camera
-vendor/lib/libFace3DTA.so
-vendor/lib/libFace3D_hlos.so
 vendor/lib/libQ6MSFR_manager_stub.so
 vendor/lib/libbitmlengine.so
 vendor/lib/libcamera_nn_stub.so
@@ -89,8 +87,6 @@ vendor/lib/libsynx.so
 vendor/lib/libthreadutils.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
-vendor/lib64/libFace3DTA.so
-vendor/lib64/libFace3D_hlos.so
 vendor/lib64/libHalSuperSensorServer.so
 vendor/lib64/libMIAIHDRhvx_interface.so
 vendor/lib64/libPSNPE.so
@@ -510,11 +506,9 @@ vendor/lib/libsns_device_mode_stub.so
 vendor/lib/libsns_fastRPC_util.so
 vendor/lib/libsns_low_lat_stream_stub.so
 vendor/lib/libsns_registry_skel.so
-vendor/lib/libsnsapi.so
 vendor/lib/libsnsdiaglog.so
 vendor/lib/libssc.so
 vendor/lib/libssc_default_listener.so
-vendor/lib/libssccalapi.so
 vendor/lib/libultrasound.so
 vendor/lib/sensors.mius.proximity.so
 vendor/lib/sensors.ssc.so

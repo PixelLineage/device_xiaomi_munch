@@ -13,6 +13,12 @@ function vendor_imports() {
 EOF
 }
 
+# If we're being sourced by the common script that we called,
+# stop right here. No need to go down the rabbit hole.
+if [ "${BASH_SOURCE[0]}" != "${0}" ]; then
+    return
+fi
+
 set -e
 
 export DEVICE=munch
