@@ -12,6 +12,8 @@ TARGET_INCLUDES_MIUI_CAMERA := true
 
 DEVICE_PATH := device/xiaomi/munch
 
+BUILD_BROKEN_DUP_RULES := true
+
 # Board
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
