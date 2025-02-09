@@ -450,4 +450,7 @@
 
     <!-- default refresh rate in the zone defined by brightness and ambient thresholds -->
     <integer name="config_defaultRefreshRateInZone">120</integer>
+
+    <!-- Build fingerprint from stock ROM -->
+    <string name="config_stockFingerprint" translatable="false">POCO/munch_global/munch:13/RKQ1.211001.001/V816.0.5.0.ULMMIXM:user/release-keys</string>
 </resources>
