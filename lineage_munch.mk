@@ -11,6 +11,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Device specific
+TARGET_BOOT_ANIMATION_RES := 1080
+
 # Inherit from munch device
 $(call inherit-product, device/xiaomi/munch/device.mk)
 
@@ -23,5 +26,5 @@ PRODUCT_MODEL := 22021211RC
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="munch-user 13 RKQ1.211001.001 V816.0.5.0.ULMMIXM release-keys" \
-    BuildFingerprint=Redmi/munch/munch:13/RKQ1.211001.001/V816.0.5.0.ULMMIXM:user/release-keys
+    BuildDesc="munch_global-user 13 RKQ1.211001.001 V816.0.5.0.ULMMIXM release-keys" \
+    BuildFingerprint=POCO/munch_global/munch:13/RKQ1.211001.001/V816.0.5.0.ULMMIXM:user/release-keys
