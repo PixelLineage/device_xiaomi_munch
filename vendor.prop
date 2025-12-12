@@ -37,6 +37,8 @@ vendor.audio_hal.period_multiplier=3
 ro.hardware.audio.primary=munch
 
 # Display
+ro.vendor.display.paneltype=2
+vendor.display.defer_fps_frame_count=2
 ro.surface_flinger.set_idle_timer_ms=1500
 ro.surface_flinger.set_touch_timer_ms=200
 ro.surface_flinger.set_display_power_timer_ms=1000
