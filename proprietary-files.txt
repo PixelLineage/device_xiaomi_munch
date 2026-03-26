@@ -63,6 +63,13 @@ vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
 # Audio firmware
 vendor/firmware/tfa98xx.cnt
 
+# Bluetooth
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/libbtnv.so
+vendor/lib64/libsoc_helper.so
+
 # Camera
 vendor/lib64/camera/com.qti.actuator.munch_ofilm_imx582_dw9800v_wide_actuator.so
 vendor/lib64/camera/com.qti.actuator.munch_sunny_ov64b40_dw9800v_wide_actuator.so
@@ -406,6 +413,9 @@ vendor/etc/libnfc-nxp_RF.conf:vendor/libnfc-nxp_RF.conf
 vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nxp.conf
 vendor/lib/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so
+
+# NVRAM
+vendor/bin/nv_mac
 
 # Sensor calibrate
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
