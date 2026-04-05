@@ -20,9 +20,6 @@ TARGET_SCREEN_DENSITY := 440
 # Kernel
 TARGET_KERNEL_CONFIG := vendor/munch_defconfig
 
-# Miui Camera
-TARGET_INCLUDES_MIUI_CAMERA := true
-
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := munch,munch_global,munch_in
 
